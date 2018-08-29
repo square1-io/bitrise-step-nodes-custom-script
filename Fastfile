@@ -202,7 +202,7 @@ platform :ios do
       git_branch: match_branch,
       type: export_method_match,
       app_identifier: bundle_id,       
-      readonly: false
+      readonly: true
     )    
 
     path_env_var = "sigh_#{bundle_id}_#{export_method_match}_profile-path"
@@ -235,7 +235,7 @@ platform :ios do
           git_branch: match_branch,
           type: export_method_match,
           app_identifier: ext_id,       
-          readonly: false
+          readonly: true
         )   
 
         ext_path_env_var = "sigh_#{ext_id}_#{export_method_match}_profile-path"
@@ -306,7 +306,7 @@ platform :ios do
           type: "enterprise",
           app_identifier: "*",         
           team_id: DEFAULT_ENTERPRISE_TEAM, 
-          readonly: false
+          readonly: true
         )
 
     UI.message "Creating Hockey build"
