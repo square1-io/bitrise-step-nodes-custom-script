@@ -299,27 +299,27 @@ platform :ios do
 
     # Hockey
     # ----------
-    UI.message "Installing certificate and profiles"
-        match(
-          git_url: DEFAULT_MATCH_REPO,
-          git_branch: DEFAULT_ENTERPRISE_BRANCH,
-          type: "enterprise",
-          app_identifier: "*",         
-          team_id: DEFAULT_ENTERPRISE_TEAM, 
-          readonly: true
-        )
+#     UI.message "Installing certificate and profiles"
+#         match(
+#           git_url: DEFAULT_MATCH_REPO,
+#           git_branch: DEFAULT_ENTERPRISE_BRANCH,
+#           type: "enterprise",
+#           app_identifier: "*",         
+#           team_id: DEFAULT_ENTERPRISE_TEAM, 
+#           readonly: true
+#         )
 
-    UI.message "Creating Hockey build"
+#     UI.message "Creating Hockey build"
     
-    resign(
-      ipa: second_path,
-      signing_identity: "iPhone Distribution: Nodes Aps",
-      provisioning_profile: ENV['sigh_*_enterprise_profile-path'],
-      use_app_entitlements: false,
-      verbose: true
-    )
+#     resign(
+#       ipa: second_path,
+#       signing_identity: "iPhone Distribution: Nodes Aps",
+#       provisioning_profile: ENV['sigh_*_enterprise_profile-path'],
+#       use_app_entitlements: false,
+#       verbose: true
+#     )
 
-    UI.message "Hockey IPA at: #{second_path}"   
+#     UI.message "Hockey IPA at: #{second_path}"   
 
     # If for some reason the get_team_name doesnt work, you can manually specify it
     team_name = options["team_name"]
