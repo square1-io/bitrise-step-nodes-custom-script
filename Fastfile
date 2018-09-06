@@ -329,7 +329,7 @@ platform :ios do
 
     $deploy_config << {
       'testflight_ipa' => ipa_path,
-      'hockey_ipa' => second_path,
+      'hockey_ipa' => ipa_path,
       'dsym' => ipa_path.sub('.ipa', '.app.dSYM.zip'),
       'hockey_app_id' => options['hockey-app-id'],
       'changelog' => ENV['COMMIT_CHANGELOG'],
