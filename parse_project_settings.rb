@@ -205,12 +205,12 @@ unless DEBUG_MODE
     hockey_build = buildnumber["build"].to_i
 
     # Compare, make sure that build is always higher and version is at least higher or equal
-    unless (Version.new(xcode_version) >= Version.new(hockey_version)) && (xcode_build > hockey_build)
-      valid = false
-      warning_message = """#{key}: Xcode version #{xcode_version} (#{xcode_build}) is lower or equal than the one on Hockey #{hockey_version} (#{hockey_build})."""
-      message +="#{warning_message} \n"
-      puts yellow "|- #{warning_message}"
-    end
+#     unless (Version.new(xcode_version) >= Version.new(hockey_version)) && (xcode_build > hockey_build)
+#       valid = false
+#       warning_message = """#{key}: Xcode version #{xcode_version} (#{xcode_build}) is lower or equal than the one on Hockey #{hockey_version} (#{hockey_build})."""
+#       message +="#{warning_message} \n"
+#       puts yellow "|- #{warning_message}"
+#     end
   }
 end
 
